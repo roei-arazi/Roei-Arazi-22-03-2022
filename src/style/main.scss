@@ -1,0 +1,19 @@
+// Basics
+@import "base/variables.scss";
+@import "base/typography.scss";
+@import "helpers/flex.scss";
+@import "helpers/position.scss";
+@import "helpers/dark_mode.scss";
+@import "base/slider.scss";
+@import "base/base.scss";
+
+// Pages
+@import "pages/main_page.scss";
+@import "pages/favorites_page.scss";
+
+// Components
+@import "cmps/header.scss";
+@import "cmps/weather_icon.scss";
+@import "cmps/weather_preview.scss";
+@import "cmps/_weather_favorite_preview.scss";
+@import "cmps/weather_list.scss";

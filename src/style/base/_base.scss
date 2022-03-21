@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Livvic-Medium;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    height: 90vh;
+}
+
+header{
+    height: 10vh;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+
+.w100{
+    width:100%;
+}
+
+.h100{
+    height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.weather-icon{
+    color: $txtClr;
+}
+
+input:focus{
+    outline-width: 0;
+}

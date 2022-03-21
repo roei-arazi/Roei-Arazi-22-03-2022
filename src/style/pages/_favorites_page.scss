@@ -1,0 +1,11 @@
+.favorite-icon{
+    font-size: 2em;
+    cursor: pointer;
+    color: $clr1;
+}
+
+.favorite-list{
+    >*{
+        padding-top:20px;
+    }
+}

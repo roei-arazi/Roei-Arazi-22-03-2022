@@ -1,0 +1,126 @@
+.curr-weather {
+    height:40vh;
+
+    h4{
+        font-size: 2em;
+        margin-bottom: 5px;
+        letter-spacing: 1.5px;
+    }
+    p{
+        font-size:1.5em;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+
+    .weather-icon,
+    h4,
+    p {
+        color: $clr1;
+    }
+}
+
+.seasrch-city {
+    width: fit-content;
+
+    .search-city-input {
+        height: 30px;
+        width: 200px;
+        text-align: center;
+        border: none;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 15px;
+    }
+
+    .city-list {
+        margin-top: 29px;
+        border-left: 1px solid $borderClr;
+        border-right: 1px solid $borderClr;
+        background-color: $clr1;
+        color: $txtClr;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        >* {
+            padding: 10px 5px;
+            border-bottom: 1px solid $borderClr;
+
+            h4{
+                color: $txtClr;
+                font-size: 1em;
+            }
+            p{
+                color: $borderClr;
+                font-size: 0.8em;
+            }
+        }
+
+        >:last-child {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+
+    .cities-shown {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.not-dark {
+    background-color: $clr2;
+}
+
+.orange-hover:hover {
+    transition: .3s;
+    background-color: $clr2;
+    cursor: pointer;
+}
+
+.dark-hover:hover {
+    transition: .3s;
+    background-color: $darkModeBgc;
+    cursor: pointer;
+
+    h4,p{
+        color: $clr1;
+    }
+}
+
+.scale-in-ver-top {
+	-webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }

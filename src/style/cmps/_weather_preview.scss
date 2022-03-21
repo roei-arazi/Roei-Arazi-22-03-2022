@@ -1,0 +1,25 @@
+.weather-preview{
+    width:20%;
+    min-height: 100px;
+
+    .weather-preview-header{
+        height:50%;
+    }
+}
+
+@media (max-width: 920px){
+    .preview-desktop{
+    display: none;
+    }
+}
+
+
+@media (min-width: 920px){
+    .preview-mobile{
+    display: none;
+    }
+    .weather-preview{
+        min-height: 150px;
+    }
+
+}

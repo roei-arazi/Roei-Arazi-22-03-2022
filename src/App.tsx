@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router';
+import { Header } from './cmps/Header';
+import { WeatherFavorites } from './pages/WeatherFavorites';
+import { WeatherMain } from './pages/WeatherMain';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        <Routes>
+          <Route path='/favorites' element={<WeatherFavorites />} />
+          <Route path='/:cityKey/:cityName' element={<WeatherMain />} />
+          <Route path='/' element={<WeatherMain />} />
+        </Routes>
+      </main>
     </div>
   );
 }

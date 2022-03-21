@@ -1,0 +1,13 @@
+.weather-favorite-preview {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid $borderClr;
+
+    >*{
+        padding-bottom:20px;
+    }
+
+    h4{
+        font-size: 1.5em;
+    }
+}

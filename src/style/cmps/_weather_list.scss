@@ -1,0 +1,11 @@
+.weather-list{
+    margin:30px 0;
+
+    >:first-child{
+        border-left: none;
+    }
+    
+
+    @media (max-width: 920px){
+    }
+}
