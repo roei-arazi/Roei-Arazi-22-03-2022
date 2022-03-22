@@ -3,7 +3,7 @@ import { localStorageService } from "./localStorageService"
 
 // Default Definitions
 const axios = Axios
-const API_KEY = 'Bze17EebJEBSPbWCsydbBvxcliLVFwsD'
+const API_KEY = '9EY32WjZvp8Ay8SZHI6pzgmAGmr50U0f'
 const WEATHER_KEY = 'Weather'
 const FAVORTES_KEY = 'Favorites'
 const DARK_KEY = 'Dark'
@@ -112,13 +112,11 @@ async function removeFavorite(cityKey: number) {
     }
 }
 
-async function autoComplete(query: string) {
+async function autoComplete(query: string) {    
     if(!query) return []
     try {
         const cityList = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`)
-            .then((res: any) => res.data)            
-            console.log(cityList);
-            
+            .then((res: any) => res.data)      
         return cityList.length > 4 ? cityList.slice(0, 5) : cityList
     } catch (err: any) {
         console.log(err);

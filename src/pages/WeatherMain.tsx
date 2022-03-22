@@ -72,20 +72,20 @@ export function WeatherMain() {
         dispatch(getWeather(cityKey, cityName))
     }
 
-    if (!weather) return <div className={`h100 ${isDark ? 'dark white' : ''}`}>Loading...</div>        
+    if (!weather) return <div className={`h100 ${isDark ? 'dark white' : ''}`}>Loading...</div>    
     return (
         <section className={`main flex column align-center h100 ${isDark ? 'dark' : ''}`}>
             <div className={`curr-weather flex column align-center w100 ${isDark ? 'dark-header' : 'not-dark'}`}>
-            <div className="seasrch-city flex column align-center container relative">
-                <input type="text" onChange={handleChange} value={searchValue} placeholder="Search a different city" className={`search-city-input ${cityList.length ? 'cities-shown' : ''}`} />
-                <ul className="city-list absolute w100 scale-in-ver-top">
-                    {cityList?.map((city: any) =>
-                        <li className={`flex space-between align-center ${isDark ? 'dark-hover' : 'orange-hover white'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
-                            <h4 className="city-name-country-list">{city.LocalizedName}</h4>
-                            <p className="country-name-city-list">{city.Country.LocalizedName}</p>
-                        </li>)}
-                </ul>
-            </div>
+                <div className="seasrch-city flex column align-center container relative">
+                    <input type="text" onChange={handleChange} value={searchValue} placeholder="Search a different city" className={`search-city-input ${cityList.length ? 'cities-shown' : ''}`} />
+                    <ul className="city-list absolute w100 scale-in-ver-top">
+                        {cityList?.map((city: any) =>
+                            <li className={`flex space-between align-center ${isDark ? 'dark-hover' : 'orange-hover white'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
+                                <h4 className="city-name-country-list">{city.LocalizedName}</h4>
+                                <p className="country-name-city-list">{city.Country.LocalizedName}</p>
+                            </li>)}
+                    </ul>
+                </div>
                 <div className="curr-weather-header flex column container">
                     {weather.isFavorite ?
                         <AiFillStar className="favorite-icon favorite-filled self-end" onClick={() => handleFavorite(weather.cityKey, weather.isFavorite, weather.cityName)} />
@@ -95,7 +95,7 @@ export function WeatherMain() {
                 </div>
                 {weather && <MainCurrWeather weather={weather.currWeather} cityName={weather.cityName} degrees={degrees} />}
             </div>
-                {weather && <WeatherMainList weather={weather} isDark={isDark} degrees={degrees} />}
+            {weather && <WeatherMainList weather={weather} isDark={isDark} degrees={degrees} />}
         </section>
     )
 }
