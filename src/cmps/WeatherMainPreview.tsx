@@ -29,7 +29,7 @@ export function WeatherMainPreview(props: any) {
                     </h4>
                     :
                     <h4 className={`preview-mobile ${isDark ? 'white' : ''}`}>
-                        {Math.round((Temperature.Minimum.Value + Temperature.Maximum.Value) / 2 * 1.8 + 32)}<WiCelsius />
+                        {Math.round((Temperature.Minimum.Value + Temperature.Maximum.Value) / 2 * 1.8 + 32)}<WiFahrenheit />
                     </h4>
             }
         </div>
