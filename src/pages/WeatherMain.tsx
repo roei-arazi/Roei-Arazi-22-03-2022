@@ -80,7 +80,7 @@ export function WeatherMain() {
                 <input type="text" onChange={handleChange} value={searchValue} placeholder="Search a different city" className={`search-city-input ${cityList.length ? 'cities-shown' : ''}`} />
                 <ul className="city-list absolute w100 scale-in-ver-top">
                     {cityList?.map((city: any) =>
-                        <li className={`flex space-between ${isDark ? 'dark-hover' : 'orange-hover white'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
+                        <li className={`flex space-between align-center ${isDark ? 'dark-hover' : 'orange-hover white'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
                             <h4 className="city-name-country-list">{city.LocalizedName}</h4>
                             <p className="country-name-city-list">{city.Country.LocalizedName}</p>
                         </li>)}

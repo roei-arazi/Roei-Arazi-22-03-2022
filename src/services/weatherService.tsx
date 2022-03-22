@@ -113,10 +113,13 @@ async function removeFavorite(cityKey: number) {
 }
 
 async function autoComplete(query: string) {
+    if(!query) return []
     try {
         const cityList = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`)
-            .then((res: any) => res.data)
-        return cityList.length > 4 ? cityList.slice(0, 4) : cityList
+            .then((res: any) => res.data)            
+            console.log(cityList);
+            
+        return cityList.length > 4 ? cityList.slice(0, 5) : cityList
     } catch (err: any) {
         console.log(err);
     }

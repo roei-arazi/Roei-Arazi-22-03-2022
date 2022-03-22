@@ -46,11 +46,15 @@
 
             h4{
                 color: $txtClr;
-                font-size: 1em;
+                font-size: 0.9em;
+                margin-bottom: 0;
+                letter-spacing: 1px;
             }
             p{
                 color: $borderClr;
-                font-size: 0.8em;
+                font-size: 0.7em;
+                text-align: end;
+                letter-spacing: 1px;
             }
         }
 
