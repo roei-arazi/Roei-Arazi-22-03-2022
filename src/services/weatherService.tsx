@@ -60,7 +60,7 @@ async function getWeather(cityKey: number | null, cityName: string | null) {
 }
 
 async function _getCurrWeather(cityKey: number) {
-    const currWeather = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${API_KEY}`)
+    const currWeather = await axios.get(`https://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${API_KEY}`)
         .then(res => res.data[0])
     return currWeather
 }
@@ -70,7 +70,7 @@ async function getFavoritesWeather() {
     try {
         if (favorites) {
             const favoritesData = await Promise.all(JSON.parse(favorites).map(async (favorite: favorite) => {
-                const data = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${favorite.cityKey}?apikey=${API_KEY}`)
+                const data = await axios.get(`https://dataservice.accuweather.com/currentconditions/v1/${favorite.cityKey}?apikey=${API_KEY}`)
                     .then(res => res.data[0])
                 return { ...data, ...favorite }
             }))
@@ -114,7 +114,7 @@ async function removeFavorite(cityKey: number) {
 
 async function autoComplete(query: string) {
     try {
-        const cityList = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`)
+        const cityList = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`)
             .then((res: any) => res.data)
         return cityList.length > 4 ? cityList.slice(0, 4) : cityList
     } catch (err: any) {
