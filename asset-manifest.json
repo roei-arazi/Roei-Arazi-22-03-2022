@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Roei-Arazi-22-03-2022/static/css/main.ea0efa9d.css",
+    "main.js": "/Roei-Arazi-22-03-2022/static/js/main.1784713e.js",
+    "static/js/787.d9312eb8.chunk.js": "/Roei-Arazi-22-03-2022/static/js/787.d9312eb8.chunk.js",
+    "static/media/Livvic-Black.ttf": "/Roei-Arazi-22-03-2022/static/media/Livvic-Black.254768ad2c9b1f50cc0c.ttf",
+    "static/media/Livvic-Light.ttf": "/Roei-Arazi-22-03-2022/static/media/Livvic-Light.19c3560ac3efd5c53142.ttf",
+    "static/media/Livvic-Bold.ttf": "/Roei-Arazi-22-03-2022/static/media/Livvic-Bold.24721b262e71d62c58b1.ttf",
+    "static/media/Livvic-SemiBold.ttf": "/Roei-Arazi-22-03-2022/static/media/Livvic-SemiBold.f5f723711280f4536ef8.ttf",
+    "static/media/Livvic-Medium.ttf": "/Roei-Arazi-22-03-2022/static/media/Livvic-Medium.42afd55173b0d9db3479.ttf",
+    "index.html": "/Roei-Arazi-22-03-2022/index.html",
+    "main.ea0efa9d.css.map": "/Roei-Arazi-22-03-2022/static/css/main.ea0efa9d.css.map",
+    "main.1784713e.js.map": "/Roei-Arazi-22-03-2022/static/js/main.1784713e.js.map",
+    "787.d9312eb8.chunk.js.map": "/Roei-Arazi-22-03-2022/static/js/787.d9312eb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0efa9d.css",
+    "static/js/main.1784713e.js"
+  ]
+}
