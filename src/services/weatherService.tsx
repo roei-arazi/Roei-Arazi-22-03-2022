@@ -3,7 +3,7 @@ import { localStorageService } from "./localStorageService"
 
 // Default Definitions
 const axios = Axios
-const API_KEY = '9zsyMmyqAGLIkzuaDcfkXv3ddkM2aPIm'
+const API_KEY = 'Bze17EebJEBSPbWCsydbBvxcliLVFwsD'
 const WEATHER_KEY = 'Weather'
 const FAVORTES_KEY = 'Favorites'
 const DARK_KEY = 'Dark'

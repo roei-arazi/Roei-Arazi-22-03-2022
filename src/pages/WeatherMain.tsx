@@ -72,7 +72,7 @@ export function WeatherMain() {
         dispatch(getWeather(cityKey, cityName))
     }
 
-    if (!weather) return <div>Loading...</div>        
+    if (!weather) return <div className={`h100 ${isDark ? 'dark white' : ''}`}>Loading...</div>        
     return (
         <section className={`main flex column align-center h100 ${isDark ? 'dark' : ''}`}>
             <div className={`curr-weather flex column align-center w100 ${isDark ? 'dark-header' : 'not-dark'}`}>
@@ -80,7 +80,7 @@ export function WeatherMain() {
                 <input type="text" onChange={handleChange} value={searchValue} placeholder="Search a different city" className={`search-city-input ${cityList.length ? 'cities-shown' : ''}`} />
                 <ul className="city-list absolute w100 scale-in-ver-top">
                     {cityList?.map((city: any) =>
-                        <li className={`flex space-between ${isDark ? 'dark-hover' : 'orange-hover'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
+                        <li className={`flex space-between ${isDark ? 'dark-hover' : 'orange-hover white'}`} key={city.Key} onClick={() => onSetWeather(+city.Key, city.LocalizedName)}>
                             <h4 className="city-name-country-list">{city.LocalizedName}</h4>
                             <p className="country-name-city-list">{city.Country.LocalizedName}</p>
                         </li>)}

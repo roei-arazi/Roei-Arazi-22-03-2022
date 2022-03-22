@@ -38,7 +38,7 @@ export function WeatherFavorites() {
                 {favoritesData && favoritesData.length ? favoritesData.map((favorite:number, idx:number) =>
                     <WeatherFavoritesPreview key={idx} favorite={favorite} isDark={isDark} degrees={degrees} onRemoveFavorite={onRemoveFavorite} showWeather={showWeather} />)
                     :
-                    <h1>No Favorites yet...</h1>
+                    <h1 className={isDark ? 'white' : ''}>No Favorites yet...</h1>
                 }
             </div>
         </section>
