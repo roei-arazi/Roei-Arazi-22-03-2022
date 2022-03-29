@@ -28,7 +28,7 @@ export const weatherService = {
 
 async function getWeather(cityKey: number | null, cityName: string | null) {
     // let weatherForecast: any = localStorageService.get(WEATHER_KEY) //Comment if in Production
-    let weatherForecast : any  // Comment if in Develepoment  
+    let weatherForecast: any  // Comment if in Develepoment  
     let currWeather: any
     try {
         if (!weatherForecast || !weatherForecast.length) {
@@ -112,11 +112,11 @@ async function removeFavorite(cityKey: number) {
     }
 }
 
-async function autoComplete(query: string) {    
-    if(!query) return []
+async function autoComplete(query: string) {
+    if (!query) return []
     try {
         const cityList = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`)
-            .then((res: any) => res.data)      
+            .then((res: any) => res.data)
         return cityList.length > 4 ? cityList.slice(0, 5) : cityList
     } catch (err: any) {
         console.log(err);
@@ -124,25 +124,25 @@ async function autoComplete(query: string) {
 }
 
 function switchDarkMode(isDark: number | null) {
-    let dark:any =localStorageService.get(DARK_KEY)
-    if (isDark !== null) {        
+    let dark: any = localStorageService.get(DARK_KEY)
+    if (isDark !== null) {
         localStorageService.set(DARK_KEY, isDark)
         dark = isDark
     }
-    if(!dark){
-        if(+dark !== 0 || +dark !== 1) dark=0
+    if (!dark) {
+        if (+dark !== 0 || +dark !== 1) dark = 0
         localStorageService.set(DARK_KEY, dark)
     }
     return +dark
 }
 
 function switchDegrees(temp: string | null) {
-    let degrees:any =localStorageService.get(DEGREES_KEY)
-    if (temp) {        
+    let degrees: any = localStorageService.get(DEGREES_KEY)
+    if (temp) {
         localStorageService.set(DARK_KEY, temp)
         degrees = temp
     }
-    if(!degrees){
+    if (!degrees) {
         degrees = 'C'
         localStorageService.set(DARK_KEY, degrees)
     }
