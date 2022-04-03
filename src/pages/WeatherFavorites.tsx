@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { RootStateOrAny, useDispatch, useSelector } from "react-redux"
+import { RootStateOrAny, useSelector } from "react-redux"
 import { useNavigate } from "react-router"
 import { WeatherFavoritesPreview } from "../cmps/WeatherFavoritesPreview"
 import { weatherService } from "../services/weatherService"
@@ -10,7 +10,6 @@ export function WeatherFavorites() {
 
     const [favoritesData, setFavoritesData] = useState<any>()
 
-    const dispatch = useDispatch()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -18,7 +17,7 @@ export function WeatherFavorites() {
             setFavoritesData(await weatherService.getFavoritesWeather())
         }
         fetchFavorites()
-    }, [dispatch])
+    }, [])
 
     function showWeather(cityKey:number, cityName:string){    
         navigate(`/${cityKey}/${cityName}`)
