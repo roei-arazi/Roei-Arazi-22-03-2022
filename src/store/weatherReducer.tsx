@@ -18,7 +18,7 @@ export function weatherReducer(state = initialState, action: any) {
                 ...state,
                 weather: action.weather
             }
-            case 'SET_FAVORITES':
+        case 'SET_FAVORITES':
             return {
                 ...state,
                 favorites: action.favorites
@@ -28,10 +28,10 @@ export function weatherReducer(state = initialState, action: any) {
                 ...state,
                 favorites: [...state.favorites, action.favorite]
             }
-        case 'REMOVE_FAVORITE':                
+        case 'REMOVE_FAVORITE':
             return {
                 ...state,
-                favorites: state.favorites.filter((favorite: any)=> favorite.cityKey !== action.cityKey)
+                favorites: state.favorites.filter((favorite: any) => favorite.cityKey !== action.cityKey)
             }
         case 'SWITCH_DARK_MODE':
             return {

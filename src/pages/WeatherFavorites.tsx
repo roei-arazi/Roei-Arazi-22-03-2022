@@ -13,20 +13,20 @@ export function WeatherFavorites() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        async function fetchFavorites(){
+        async function fetchFavorites() {
             setFavoritesData(await weatherService.getFavoritesWeather())
         }
         fetchFavorites()
     }, [])
 
-    function showWeather(cityKey:number, cityName:string){    
+    function showWeather(cityKey: number, cityName: string) {
         navigate(`/${cityKey}/${cityName}`)
     }
-    
+
     return (
         <section className={`w100 h100 ${isDark ? 'dark' : ''}`}>
             <div className="favorite-list flex justify-center wrap container">
-                {favoritesData && favoritesData.length ? favoritesData.map((favorite:number, idx:number) =>
+                {favoritesData && favoritesData.length ? favoritesData.map((favorite: number, idx: number) =>
                     <WeatherFavoritesPreview key={idx} favorite={favorite} isDark={isDark} degrees={degrees} showWeather={showWeather} />)
                     :
                     <h1 className={isDark ? 'white' : ''}>No Favorites yet...</h1>

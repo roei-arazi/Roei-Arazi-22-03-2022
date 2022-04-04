@@ -72,7 +72,7 @@ export function WeatherMain() {
         dispatch(getWeather(cityKey, cityName))
     }
 
-    if (!weather) return <div className={`h100 ${isDark ? 'dark white' : ''}`}>Loading...</div>    
+    if (!weather) return <div className={`h100 ${isDark ? 'dark white' : ''}`}>Loading...</div>
     return (
         <section className={`main flex column align-center h100 ${isDark ? 'dark' : ''}`}>
             <div className={`curr-weather flex column align-center w100 ${isDark ? 'dark-header' : 'not-dark'}`}>

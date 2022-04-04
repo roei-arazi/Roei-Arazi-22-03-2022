@@ -10,15 +10,15 @@ export function WeatherFavoritesPreview(props: any) {
         <div className="weather-favorite-preview flex column space-between align-center" onClick={() => showWeather(cityKey, cityName)}>
             <h4 className={isDark ? 'white' : ''}>{cityName}</h4>
             <div className='flex align-center'>
-                {degrees ==='C' ?
-                <h4 className={isDark ? 'white' : ''}>
-                {Math.round(Temperature.Metric.Value)}<WiCelsius />
-                </h4>
-                :
-                <h4 className={isDark ? 'white' : ''}>
-                    {Math.round(Temperature.Imperial.Value)}<WiFahrenheit />
+                {degrees === 'C' ?
+                    <h4 className={isDark ? 'white' : ''}>
+                        {Math.round(Temperature.Metric.Value)}<WiCelsius />
+                    </h4>
+                    :
+                    <h4 className={isDark ? 'white' : ''}>
+                        {Math.round(Temperature.Imperial.Value)}<WiFahrenheit />
                     </h4>}
-                
+
                 <WeatherIconCmp icon={WeatherIcon} isDark={isDark} />
             </div>
             <p className={isDark ? 'white' : ''}>{WeatherText}</p>

@@ -28,7 +28,7 @@ export function Header() {
     function handleModal() {
         setModal(!isModal)
     }
-    
+
     return (
         <div>
             {isModal ?
